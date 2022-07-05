@@ -18,6 +18,6 @@ for parameter in network.parameters():
 	vector.append(parameter.grad.clone())
 
 FISHER = fisher.FISHER_OPERATION(input_data, network, vector, epsilon)
-print("The fisher matrix quadratic form:", FISHER.fisher_quadratic_form())
-print("The fisher matrix trace:", FISHER.fisher_trace())
-print("The fisher information sensitivity:", FISHER.fisher_sensitivity())
+print("The fisher matrix quadratic form:\n", FISHER.fisher_quadratic_form())
+print("The fisher matrix trace:\n", FISHER.fisher_trace())
+print("The fisher information sensitivity:\n", FISHER.fisher_sensitivity())
